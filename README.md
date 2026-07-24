@@ -7,45 +7,31 @@ Python IDE with Numpy and Scipy.
 
 # Program:
 ```
-#Huffman and Shannon-Fano coding
-import numpy as np
-import math 
-L  = 0
-hs = 0
-p = []
-lk = []
-n = int(input("Enter the number of Samples : "))
-for i in range (n): 
-    pr = float(input(f"Enter the probability of sample values {i + 1}: "))  
-    p.append(pr)
-for j in range (n): 
-    l = float(input(f"Enter the length of the sample values {j + 1}: "))  
-    lk.append(l)
-# Avg length of the code word
-for k in range (n):
-    Avg1 = p[k] * lk[k]
-    L = L + Avg1
+import math
+# Probabilities given
+p = [0.45,0.35,0.2]
+# Corresponding Huffman/Shannon-Fano code lengths
+lk = [1,2,2]
+n = len(p)
+# Average Codeword Length
+L = sum(p[k] * lk[k]
+for k in range(n))
 # Entropy
-for k in range (n):
-    e = p[k] * math.log(1 / p[k], 2)
-    hs = hs + e
-hs = round(hs,3)
-# Efficiency
-eff =  hs / L
-eff = round(eff,3)
-# Redundancy 
-red =  round(1 - eff,3) 
-# Variance
-var = 0
-for k in range(n):
-    var1 = p[k] * (lk[k]-L)**2
-    var = var + var1
-var = round(var,3)
+hs = sum(p[k] * math.log(1 / p[k], 2)
+ for k in range(n))
+hs = round(hs, 3)
+# Efficiency & Redundancy
+eff = round(hs / L, 3)
+red = round(1 - eff, 3)
+# Variance of codeword length
+var = sum(p[k] * (lk[k] - L) ** 2
+for k in range(n))
+var = round(var, 3)
 print(f"Average Codeword Length is : {L}")
 print(f"Entropy is : {hs}")
-print(f"Efficiency is : {eff}")
-print(f"Redudancy is : {red}")
-print(f"Variance is : {var}")
+print(f"Efficiency is : {eff * 100}%")
+print(f"Redundancy is : {red}")
+print(f"Variance is : {var}")
 ```
 # Calculation:
 ![WhatsApp Image 2025-09-01 at 12 33 13_a5dc81da](https://github.com/user-attachments/assets/17ddac48-1f60-4992-b789-681f5465a5a7)
@@ -55,7 +41,8 @@ print(f"Variance is : {var}")
 
 
 # Output
-![image](https://github.com/user-attachments/assets/38be31cf-18e4-4dfe-86bf-9da261cb469d)
+
+<img width="1011" height="215" alt="image" src="https://github.com/user-attachments/assets/8dbde500-41ae-4914-a9f4-4848fcde70dc" />
 
 # Results:
 
