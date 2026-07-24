@@ -3,8 +3,7 @@
 Consider a discrete memoryless source with symbols and statistics {0.45,0.35,0.2} for its output. 
 Apply the Huffman and Shannon-Fano to this source. Show that draw the tree diagram, the average code word length, Entropy, Variance, Redundancy, Efficiency.
 # Tools Required:
-Python IDE with Numpy and Scipy.
-
+Google Colab
 # Program:
 ```
 import math
