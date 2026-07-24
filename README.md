@@ -34,11 +34,10 @@ print(f"Redundancy is : {red}")
 print(f"Variance is : {var}")
 ```
 # Calculation:
-![WhatsApp Image 2025-09-01 at 12 33 13_a5dc81da](https://github.com/user-attachments/assets/17ddac48-1f60-4992-b789-681f5465a5a7)
-![WhatsApp Image 2025-09-01 at 12 33 11_1388be16](https://github.com/user-attachments/assets/8ee3cd3e-b2a3-4bc3-8cff-d302c090fd6b)
 
+<img width="729" height="1280" alt="image" src="https://github.com/user-attachments/assets/b347aaf8-bbec-4664-bb64-471605704f91" />
 
-
+<img width="834" height="1280" alt="image" src="https://github.com/user-attachments/assets/8c806288-beca-489c-ae60-f959517fa969" />
 
 # Output
 
